@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+scraper/node_modules/
+
+# build outputs
+.next/
+out/
+
+# env files
+.env
+.env.local
+.env*.local
+
+# vercel
+.vercel
+
+# build artifacts
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# scripts / test files
+*.py
+ocr_test_results.json
+scripts/check_packs.py
+
+# claude config
+.claude/
+
+# leftover campaign assets at root
+*.jpg
+*.jpeg
+*.png
+*.svg
+index.html
+apps-script.js
+"h -u origin master"
