@@ -719,14 +719,11 @@ const Landing=({onStart})=>{
         <button onClick={onStart} style={{background:`linear-gradient(135deg,${GOLD},#c9a227)`,color:'#fff',border:'none',borderRadius:50,padding:'16px 40px',fontSize:16,fontWeight:800,cursor:'pointer',boxShadow:'0 8px 30px rgba(212,175,55,0.4)',transition:'transform 0.2s',marginBottom:36}} onMouseEnter={e=>e.currentTarget.style.transform='translateY(-3px)'} onMouseLeave={e=>e.currentTarget.style.transform='translateY(0)'}>
           Build Your Diwali Hamper in 30 Seconds →
         </button>
-        <div style={{borderTop:'1px solid rgba(212,175,55,0.12)',paddingTop:22,display:'flex',flexWrap:'wrap',gap:'10px 0',alignItems:'center'}}>
-          {['🎁 Personalised Branding','🚚 Pan-India Delivery','🏢 2000+ Companies Gifted','📦 50,000+ Hampers Delivered'].map((item,i,arr)=>(
-            <React.Fragment key={item}>
-              <span style={{color:'rgba(255,255,255,0.55)',fontSize:13,fontWeight:500}}>{item}</span>
-              {i<arr.length-1&&<span style={{color:'rgba(212,175,55,0.4)',margin:'0 12px',fontSize:11}}>✦</span>}
-            </React.Fragment>
-          ))}
-        </div>
+        <div style={{borderTop:'1px solid rgba(212,175,55,0.12)',paddingTop:22,display:'grid',gridTemplateColumns:'repeat(2, 1fr)',gap:'16px'}}>
+  {['🎁 Personalised Branding','🚚 Pan-India Delivery','🏢 2000+ Companies Gifted','📦 50,000+ Hampers Delivered'].map((item)=>(
+    <span key={item} style={{color:'rgba(255,255,255,0.55)',fontSize:18,fontWeight:500}}>{item}</span>
+  ))}
+</div>
       </div>
       {/* Right: real product photos */}
       <div className="hero-img-col" style={{flex:'0 0 44%',display:'flex',flexDirection:'column',gap:12}}>
